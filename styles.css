@@ -1,0 +1,38 @@
+:root {
+    --square-size: 50px;
+    --grid-template: repeat(var(--grid-size), var(--square-size));
+}
+
+main {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    grid-template-rows: var(--grid-template);
+    gap: 5px;
+    font-size: 10px;
+}
+
+.square {
+    background-color: greenyellow;
+    width: var(--square-size);
+    height: var(--square-size);
+    user-select: none;
+    text-align: center;
+    border: 1px solid greenyellow;
+    border-radius: 5px;
+}
+
+.bar {
+    width: 30px;
+    height: var(--bar-height);
+    background-color: navy;
+    /* transition: height var(--bar-transition-time) linear; */
+}
+
+.bar.expand { 
+    transition: none;
+}
+
+.bar.shrink {
+    height: 0;
+}
